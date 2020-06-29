@@ -6,4 +6,4 @@ before_install:
   - sudo apt-get -y install qt5-qmake qtbase5-dev qtconnectivity5-dev qtdeclarative5-dev qtquickcontrols2-5-dev qml-module-qtquick-controls
 
 script:
-- wget https://github.com/google/googletest/archive/release-1.8.1.tar.gz && tar -xvzf release-1.8.1.tar.gz && ls && pwd && cd tests && mkdir build && cd build && cmake .. && make && ./test &&  mkdir build && cd build && qmake -qt=qt5 -makefile -o Makefile "CONFIG+=telescope" ../asteroidsyncservice.pro && make
+- cd .. && wget https://github.com/google/googletest/archive/release-1.8.1.tar.gz && tar -xvzf release-1.8.1.tar.gz && cd asteroidsyncservice/tests && mkdir build && cd build && cmake .. && make && ./test &&  mkdir build && cd build && qmake -qt=qt5 -makefile -o Makefile "CONFIG+=telescope" ../asteroidsyncservice.pro && make
