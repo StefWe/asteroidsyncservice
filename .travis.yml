@@ -6,4 +6,4 @@ before_install:
   - sudo apt-get -y install qt5-qmake qtbase5-dev qtconnectivity5-dev qtdeclarative5-dev qtquickcontrols2-5-dev qml-module-qtquick-controls
 
 script:
-- prepare.sh
+- ./prepare.sh
